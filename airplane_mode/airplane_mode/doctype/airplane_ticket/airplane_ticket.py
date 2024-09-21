@@ -48,6 +48,21 @@ class AirplaneTicket(Document):
 		airplane_flight.status = "Completed"
 		airplane_flight.save()
 
+	def validate(self):
+		airplane_capacity = 0
+
+		flight = self.flight
+		flight_doc = frappe.get_doc("Airplane Flight", flight)
+		airplane = flight_doc.airplane
+
+		if airplane:
+			airplane_doc = frappe.get_doc("Airplane", airplane)
+			airplane_capacity = airplane_doc.capacity
+
+		ticket_count = frappe.db.count("Airplane Ticket", {"flight": flight})
+		if ticket_count >= airplane_capacity:
+			frappe.throw("Airplane is full. Please select another flight.")
+
 
 	pass
 
