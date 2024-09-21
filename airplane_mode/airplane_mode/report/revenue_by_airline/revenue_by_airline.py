@@ -38,11 +38,13 @@ def get_columns() -> list[dict]:
 			"fieldname": "airline",
 			"fieldtype": "Link",
 			"options": "Airline",
+			"width": 200,
 		},
 		{
 			"label": _("Revenue"),
 			"fieldname": "revenue",
 			"fieldtype": "Currency",
+			"width": 200,
 		},
 	]
 
