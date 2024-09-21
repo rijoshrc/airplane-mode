@@ -154,6 +154,7 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Total Amount"
   },
   {
@@ -174,7 +175,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-21 23:07:58.849392",
+ "modified": "2024-09-22 02:01:11.945739",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
