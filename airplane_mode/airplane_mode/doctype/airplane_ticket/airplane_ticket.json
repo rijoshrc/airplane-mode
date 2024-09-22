@@ -27,6 +27,7 @@
   "departure_time",
   "column_break_tgwu",
   "duration_of_flight",
+  "gate_number",
   "section_break_rfyz",
   "amended_from"
  ],
@@ -170,12 +171,21 @@
   {
    "fieldname": "column_break_ycno",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gate Number",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-22 13:23:56.674145",
+ "modified": "2024-09-22 18:01:18.599778",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

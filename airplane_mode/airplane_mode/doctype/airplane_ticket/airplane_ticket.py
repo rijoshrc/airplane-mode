@@ -38,10 +38,12 @@ class AirplaneTicket(Document):
 
 
 	def before_insert(self):
+		self.assign_seat()
+	
+	def assign_seat(self):
 		random_number = random.randint(1, 100)
 		random_letter = random.choice(["A","B","C","D","E"])
 		self.seat = f"{random_number}{random_letter}"
-
 
 	def on_submit(self):
 		airplane_flight = frappe.get_doc("Airplane Flight", self.flight)
