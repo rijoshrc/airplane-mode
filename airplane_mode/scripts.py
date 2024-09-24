@@ -2,6 +2,13 @@ import frappe
 from frappe.utils import getdate, add_months, today, formatdate
 
 def send_rent_reminders():
+
+    # check if reminder is enabled
+    reminder = frappe.db.get_single_value("Shop Rent Configuration", "enable_reminder")
+    if not reminder:
+        return
+
+
     # Get the first day of the current month
     current_date = today()
     start_date = getdate(current_date).replace(day=1)
@@ -51,7 +58,7 @@ def send_rent_reminders():
         #     message=email_message
         # )
 
-        print(tenant.email)
+        print(f"Rent reminder sent to {tenant.email}")
 
         frappe.log_error(f"Rent reminder sent to {tenant.email}", "Rent Reminder")
 
