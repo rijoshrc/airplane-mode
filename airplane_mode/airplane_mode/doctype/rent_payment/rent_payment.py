@@ -7,6 +7,18 @@ from frappe.model.document import Document
 
 class RentPayment(Document):
 
+	
+	def validate(self):
+		if self.shop:
+			shop = frappe.get_doc("Airport Shop", self.shop)
+			if not shop.status == "Occupied":
+				frappe.throw("Shop is not occupied")
+
+
+		if not self.tenant:
+			frappe.throw("Tenant is required")
+		
+
 	def before_submit(self):
 		self.status = "Paid"
 

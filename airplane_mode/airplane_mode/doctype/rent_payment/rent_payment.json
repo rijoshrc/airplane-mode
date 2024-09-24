@@ -8,8 +8,8 @@
  "field_order": [
   "section_break_cqwr",
   "payment_date",
-  "tenant",
   "shop",
+  "tenant",
   "rent_amount",
   "status",
   "amended_from"
@@ -39,12 +39,13 @@
    "reqd": 1
   },
   {
+   "fetch_from": "shop.tenant",
    "fieldname": "tenant",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Tenant",
    "options": "Tenant",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "shop",
@@ -74,7 +75,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-23 19:32:41.601448",
+ "modified": "2024-09-24 13:27:56.526624",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Rent Payment",
