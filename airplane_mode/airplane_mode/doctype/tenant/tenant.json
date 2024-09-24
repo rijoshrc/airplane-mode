@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "name1",
   "image",
   "email",
   "phone_number",
@@ -35,6 +36,13 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Image"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   }
  ],
  "image_field": "image",
@@ -51,7 +59,7 @@
    "link_fieldname": "tenant"
   }
  ],
- "modified": "2024-09-23 14:21:44.527346",
+ "modified": "2024-09-24 19:57:16.221167",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Tenant",
