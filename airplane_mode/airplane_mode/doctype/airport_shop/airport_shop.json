@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SHOP-{airport_code}-{###}",
+ "creation": "2024-09-23 10:08:31.207578",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "area",
+  "status",
+  "column_break_gjaj",
+  "airport",
+  "tenant",
+  "airport_code",
+  "contract_details_section",
+  "rent_amount",
+  "contract_start_date",
+  "column_break_izdg",
+  "contract",
+  "contract_expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area",
+   "reqd": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nOccupied",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gjaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fetch_from": "airport.code",
+   "fieldname": "airport_code",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Airport Code"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Shop Lease Contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_izdg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contract.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.contract_expiry_date",
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Date",
+   "label": "Contract Expiry Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Shop Lease Contract",
+   "link_doctype": "Shop Lease Contract",
+   "link_fieldname": "shop"
+  }
+ ],
+ "modified": "2024-09-23 14:24:12.221100",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airport Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "name1",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
