@@ -3,13 +3,13 @@ import frappe
 def execute(filters=None):
     columns, data = [], []
     
-    # Define columns for the report
+    
     columns = [
         {"label": "Airport", "fieldname": "airport", "fieldtype": "Link", "options": "Airport", "width": 200},
         {"label": "Total Rent Collected", "fieldname": "total_rent_collected", "fieldtype": "Currency", "width": 150}
     ]
     
-    # Fetch rent collected data from Airport Shop and Rent Payment Doctypes
+    
     rent_data = frappe.db.sql("""
         SELECT 
             shop.airport AS airport,
@@ -24,12 +24,27 @@ def execute(filters=None):
             shop.airport
     """, as_dict=True)
 
-    # Append each airport's data to the report data list
+    
     for record in rent_data:
         data.append({
             "airport": record.airport,
             "total_rent_collected": record.total_rent_collected
         })
-    
 
-    return columns, data
+    
+    chart_data = {
+        "data": {
+            "labels": [record['airport'] for record in rent_data],
+            "datasets": [
+                {
+                    "name": "Total Rent Collected",
+                    "values": [record['total_rent_collected'] for record in rent_data]
+                }
+            ]
+        },
+        "type": "bar",  # You can change this to 'line' or 'pie' based on your preference
+        "title": "Rent Collected from Each Airport",
+        "colors": ["#3498db"]  # Customize the bar color if needed
+    }
+
+    return columns, data, None, chart_data
