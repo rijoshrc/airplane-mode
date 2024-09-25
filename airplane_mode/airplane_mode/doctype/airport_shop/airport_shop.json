@@ -18,7 +18,9 @@
   "contract_start_date",
   "column_break_izdg",
   "contract",
-  "contract_expiry_date"
+  "contract_expiry_date",
+  "section_break_gjfs",
+  "photo"
  ],
  "fields": [
   {
@@ -55,7 +57,8 @@
    "in_list_view": 1,
    "label": "Airport",
    "options": "Airport",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "tenant",
@@ -105,8 +108,19 @@
    "fieldtype": "Date",
    "label": "Contract Expiry Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_gjfs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Photo"
   }
  ],
+ "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -115,7 +129,8 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-09-24 13:57:51.185671",
+ "make_attachments_public": 1,
+ "modified": "2024-09-25 10:39:41.502711",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport Shop",

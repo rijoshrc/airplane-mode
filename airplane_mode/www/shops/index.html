@@ -1,0 +1,21 @@
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="/assets/airplane_mode/css/shops.css">
+<h3 class="title">Available Shops</h3>
+<div class="shop-card-list">
+    {% for shop in shops %}
+    <div class="shop-card">
+        <div class="shop-image">
+            <img src="{{ shop.photo }}" alt="{{ shop.name }}">
+        </div>
+        <div class="shop-details">
+            <h4>{{ shop.name }}</h4>
+            <p><strong>Airport:</strong> {{ shop.airport }}</p>
+            <p><strong>Area:</strong> {{ shop.area }} sq ft</p>
+            <p><strong>Rent:</strong> {{ frappe.utils.fmt_money(shop.rent_amount) }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
