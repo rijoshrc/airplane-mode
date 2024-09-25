@@ -57,7 +57,7 @@ app_include_css = "/assets/airplane_mode/css/shops.css"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "shops"
 
 # website user home page (by Role)
 # role_home_page = {
