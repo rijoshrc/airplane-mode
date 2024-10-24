@@ -180,8 +180,13 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "is_submittable": 1,
- "links": [],
- "modified": "2024-09-22 18:00:03.056884",
+ "links": [
+  {
+   "link_doctype": "Airplane Ticket",
+   "link_fieldname": "flight"
+  }
+ ],
+ "modified": "2024-09-26 02:32:05.769825",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

@@ -248,3 +248,6 @@ scheduler_events = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures=[
+    "Airline"
+]

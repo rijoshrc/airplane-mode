@@ -1,0 +1,72 @@
+[
+ {
+  "customer_care_number": "213123",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1980,
+  "headquarters": "Chennai",
+  "modified": "2024-09-05 18:25:54.308980",
+  "name": "SpiceJet",
+  "website": null
+ },
+ {
+  "customer_care_number": "1231231231",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1990,
+  "headquarters": "Delhi",
+  "modified": "2024-09-05 18:26:29.446318",
+  "name": "Vistara",
+  "website": null
+ },
+ {
+  "customer_care_number": "3123123",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1980,
+  "headquarters": "Mumbai",
+  "modified": "2024-09-05 18:26:51.344160",
+  "name": "Malaysia Airlines",
+  "website": null
+ },
+ {
+  "customer_care_number": "5646544",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1970,
+  "headquarters": "Mumbai",
+  "modified": "2024-09-21 22:23:58.731528",
+  "name": "Air India",
+  "website": "https://www.airindia.com/"
+ },
+ {
+  "customer_care_number": "123245",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1960,
+  "headquarters": "Mumbai",
+  "modified": "2024-09-05 18:24:16.960961",
+  "name": "IndiGo",
+  "website": null
+ },
+ {
+  "customer_care_number": "123213",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1955,
+  "headquarters": "Delhi",
+  "modified": "2024-09-05 18:24:36.986610",
+  "name": "AirAsia",
+  "website": null
+ },
+ {
+  "customer_care_number": "1213",
+  "docstatus": 0,
+  "doctype": "Airline",
+  "founding_year": 1990,
+  "headquarters": "Mumbai",
+  "modified": "2024-09-21 22:51:40.621092",
+  "name": "Airbus",
+  "website": null
+ }
+]
