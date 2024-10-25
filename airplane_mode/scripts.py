@@ -100,4 +100,4 @@ def send_system_notifications():
 
 
 
-# bench execute airplane_mode.scripts.send_rent_reminders --site airplane.test
+# bench --site airplane.test execute airplane_mode.scripts.send_rent_reminders
