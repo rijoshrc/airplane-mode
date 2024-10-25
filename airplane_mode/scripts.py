@@ -97,3 +97,7 @@ def send_system_notifications():
                 "document_type": "Rent Payment"
             })
         notification_log.insert(ignore_permissions=True)
+
+
+
+# bench execute airplane_mode.scripts.send_rent_reminders --site airplane.test
